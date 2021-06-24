@@ -1,0 +1,1 @@
+python pubsub_to_pubsub.py --runner DataflowRunner --progect myspringml2 --region us-central1 --temp_location gs://springml-training/dataflow/temp --staging_location gs://springml-training/dataflow/staging
