@@ -45,7 +45,11 @@ public class GcsToPubsub {
                 .apply("File Reading", new ReadSplittableFile())
                 .apply("Row Processing", new Processor("training-user","gcs-to-pubsub"))
                 .apply("Success Messages Write", PubsubIO.writeMessages().to(options.getOutputPubsubTopic()));
+
+        pipeline.run();
     }
+
+
 
 }
 
